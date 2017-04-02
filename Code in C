@@ -1,1 +1,241 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
+int main ()
+{
+	float vm,si,ti, sf, tf, st, tt;
+	char cl [3], mv[3], mt[3], ms[3];
+	while(true){
+		system("timeout /t 2 >nul");
+		system("cls");
+	printf("o que deseja calcular? (vm-velocidade media, s-espaco, t-tempo): ");
+	gets (cl);
+
+		if(strcmp(cl, "vm") == 0 || strcmp(cl, "s") == 0 || strcmp(cl, "t") == 0 || strcmp(cl, "VM") == 0 || strcmp(cl, "S") == 0 || strcmp(cl, "T") == 0)
+		{
+			if(strcmp(cl, "vm") == 0 || strcmp(cl, "VM") == 0)
+			{
+				printf("Digite o espaco inicial: ");
+				scanf("%f",&si);
+				printf("Digite o espaco final: ");
+				scanf("%f",&sf);
+				printf("Digite a medida o seu espaco: (km-quilomtros, m-metros, c-centimetros) :");
+				scanf ("%s",&ms);
+					if(strcmp(ms, "km") == 0 || strcmp(ms, "m") == 0 || strcmp(ms, "c") == 0 || strcmp(cl, "KM") == 0 || strcmp(cl, "S") == 0 || strcmp(cl, "T") == 0)
+					{
+						if(strcmp(ms, "km") == 0 || strcmp(ms, "KM") == 0)
+						{
+							printf("OK, Tranformando de quilometros para metros.\n");
+							si=si*1000;
+							sf= sf*1000;
+							system("timeout /t 1 >nul");
+						}
+						else{
+							if(strcmp(ms, "m") == 0 || strcmp(ms, "M") == 0)
+							{
+								printf("OK, Vamos continuar.\n");
+								system("timeout /t 1 >nul");
+							}
+							else{
+								if(strcmp(mt, "c") == 0|| strcmp(mt, "C") == 0)
+								{
+								printf("OK, Transformando de centimetros para metros.\n");
+								si=si/100;
+								sf=sf/100;
+								system("timeout /t 1 >nul");
+								}
+							}
+					}
+				}
+					else{
+						system("cls");
+						printf("\n\n\n\n\t\t\t!!!!Erro, caracter invalida!!!!\n\n\a");
+						system("timeout /t 2 > nul");
+						system("cls");
+						return 0;
+						}
+				printf("Digite o tempo inicial: ");
+				scanf("%f",&ti);
+				printf("Digite o tempo final: ");
+				scanf("%f",&tf);
+				printf("Digite a medida o seu tempo: (h-hora, m-minuto, s-segundo) :");
+				scanf ("%s",&mt);
+					if(strcmp(mt, "h") == 0 || strcmp(mt, "m") == 0 || strcmp(mt, "s") == 0 || strcmp(mt, "H") == 0 || strcmp(mt, "M") == 0 || strcmp(mt, "S") == 0)
+					{
+						if(strcmp(mt, "h") == 0 || strcmp(mt, "H") == 0)
+						{
+							printf("OK, Tranformando de horas para segundos.");
+							ti= ti*3600;
+							tf= tf*3600;
+								system("timeout /t 1 >nul");
+						}
+						else{
+							if(strcmp(mt, "m") == 0 || strcmp(mt, "M") == 0)
+							{
+								printf("OK, Tranformando de minutos para segundos.");
+								ti= ti*60;
+								tf= tf*60;
+									system("timeout /t 1 >nul");
+							}
+							else{
+								if(strcmp(mt, "s") == 0 || strcmp(mt, "S") == 0)
+								{
+									printf("OK, Continuando");
+									system("timeout /t 1 >nul");
+								}
+								}
+							}
+					}
+					else{
+					    system("cls");
+						printf("\n\n\n\n\t\t\t!!!!Erro, caracter invalida!!!!\n\n\a");
+						system("timeout /t 2 >nul");
+						system("cls");
+						return 0;
+						}
+				vm=(sf-si)/(tf-ti);
+				printf("\nA velocidade media e igual a: %.2fm/s", vm);
+				vm=vm*3.6;
+				printf("\nA velocidade media e igual a: %.2fk/h\n", vm);
+				system("pause");
+				system("timeout /t 3 >nul");
+				return 0;
+			}
+			else{
+				if(strcmp(cl, "s") == 0 || strcmp(cl, "S") == 0)
+				{
+					printf("Digite a velocidade total: ");
+					scanf("%f",&vm);
+	    			printf("Qual a medida da velocidade? (m-metros/segundo, km-quilometro/hora): ");
+	    			scanf ("%s",&mv);
+	    				if(strcmp(mv, "m") == 0 || strcmp(mv, "km") == 0 || strcmp(mv, "M") == 0 || strcmp(mv, "KM") == 0)
+						{
+	    					if(strcmp(mv, "m") == 0|| strcmp(mv, "M") == 0)
+							{
+								printf("OK, vamos continuar.\n");
+								system("timeout /t 1 >nul");
+							}
+							else{
+								printf("OK,transformando em metros e continuando.\n");
+								vm = vm/(3.6);
+								system("timeout /t 1 >nul");
+								}
+					printf("Digite o tempo total inicial: ");
+					scanf("%f",&ti);
+					printf("Digite o tempo total final: ");
+					scanf("%f",&tf);
+					printf("Digite a medida o seu tempo: (h-hora, m-minuto, s-segundo) :");
+					scanf ("%s",&mt);
+						if(strcmp(mt, "h") == 0 || strcmp(mt, "H") == 0)
+						{
+							printf("OK, Tranformando de horas para segundos.");
+							ti= ti*3600;
+							tf= tf*3600;
+							system("timeout /t 1 >nul");
+						}
+						else{
+							if(strcmp(mt, "m") == 0 || strcmp(mt, "M") == 0)
+							{
+								printf("OK, Tranformando de minutos para segundos.");
+								ti= ti*60;
+								tf= tf*60;
+								system("timeout /t 1 >nul");
+							}
+							else{
+								if(strcmp(mt, "s") == 0 || strcmp(mt, "S") == 0);
+								printf("OK, Continuando");
+								}
+								}
+							}
+							else{
+								system("cls");
+								printf("\n\n\n\n\t\t\t!!!!Erro, caracter invalida!!!!\n\n\a");
+								system("timeout /t 2 >nul");
+								system("cls");
+								return 0;
+								}
+					st=vm*(tf-ti);
+					printf("\nO espaco total e igual a: \n%.2fm\n", st);
+					st=st/1000;
+					printf("%.2fkm", st);
+					st=st*100000;
+					printf("\n%.2fcm\n", st);
+					system("pause");
+					return 0;
+					}
+			else{
+				if(strcmp(cl, "t") == 0 || strcmp(cl, "T") == 0)
+					{
+				 		printf("Digite o espaco inicial: ");
+						scanf("%f",&si);
+						printf("Digite o espaco final: ");
+						scanf("%f",&sf);
+						printf("Digite a medida o seu espaco: (km-quilomtros, m-metros, c-centimetros) :");
+						scanf ("%s",&ms);
+							if(strcmp(ms, "km") == 0 || strcmp(ms, "m") == 0 || strcmp(ms, "c") == 0 || strcmp(cl, "KM") == 0 || strcmp(cl, "M") == 0 || strcmp(cl, "C") == 0)
+							{
+								if(strcmp(ms, "km") == 0 || strcmp(ms, "KM") == 0)
+								{
+									printf("OK, Tranformando de quilometros para metros.\n");
+									si=si*1000;
+									sf= sf*1000;
+									system("timeout /t 1 >nul");
+								}
+								else{
+									if(strcmp(ms, "m") == 0 || strcmp(ms, "M") == 0)
+			   						{
+										printf("OK, Vamos continuar.\n");
+										system("timeout /t 1 >nul");
+									}
+									else{
+										if(strcmp(mt, "c") == 0 || strcmp(mt, "C") == 0)
+										{
+											printf("OK, Transformando de centimetros para metros.\n");
+											si=si/100;
+											sf=sf/100;
+											system("timeout /t 1 >nul");
+										}
+										}
+									}
+							}
+							else{
+								system("cls");
+								printf("\n\n\n\n\t\t\t!!!!Erro, caracter invalida!!!!\n\n\a");
+								system("timeout /t 2 >nul");
+								system("cls");
+								return 0;
+								}
+						printf("Digite a velocidade media: ");
+						scanf("%f",&vm);
+						printf("Qual a medida da velocidade? (m-metros/segundo, km-quilometro/hora): ");
+	  			  		scanf ("%s",&mv);
+	    					if(strcmp(mv, "m") == 0 || strcmp(mv, "M") == 0)
+							{
+								printf("OK, vamos continuar.\n");
+									system("timeout /t 1 >nul");
+							}
+							else{
+								printf("OK,transformando para metros/segundos e continuando.\n");
+								vm = vm/3.6;
+								system("timeout /t 1 >nul");
+								}
+						tt=(sf-si)/vm;
+						printf("O tempo total e igual a: \n%.2fs", tt);
+						tt=tt/60;
+						printf("\n%.1fm", tt);
+						tt=tt/60;
+						printf("\n%.1fh\n", tt);
+						system("pause");
+						return 0;
+					}
+				}
+				}
+		}
+            else{
+                system("cls");
+                printf("\n\n\t\t\t!!!!Erro, caracter invalido!!!!\n\n\a");
+						}
+
+}
+}
